@@ -14,4 +14,10 @@ jobs:
           command: htmlproofer site/public --allow-hash-href --check-html --empty-alt-ignore --disable-external
       - deploy:
           name: Deploy to S3 
-          command: aws s3 sync site/public s3://robertovens.com/ --delete
+          command: |
+            apt-get -y -qq update
+            apt-get -y -qq install python3.4-dev
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python3.4 get-pip.py --user
+            pip install awscli --upgrade --user
+            aws s3 sync site/public s3://robertovens.com/ --delete
