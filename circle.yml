@@ -12,3 +12,8 @@ jobs:
       - run:
           name: "Recipes"
           command: htmlproofer site/public --allow-hash-href --check-html --empty-alt-ignore --disable-external
+  deployment:
+    prod:
+      branch: master
+      commands:
+        - aws s3 sync site/public s3://robertovens.com/ --delete
