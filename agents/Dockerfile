@@ -1,6 +1,6 @@
 FROM gliderlabs/alpine:3.6
 MAINTAINER robert.ovens@gmail.com
-LABEL version "1.0.0"
+LABEL version "1.1.0"
 
 ENV S3_TMP /tmp/s3cmd.zip
 ENV S3_ZIP /tmp/s3cmd-master
@@ -11,6 +11,7 @@ WORKDIR /tmp
 RUN apk --no-cache add \
       bash \
       curl \
+      git \
       jq \
       py-pip \
       python &&\

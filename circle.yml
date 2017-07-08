@@ -2,10 +2,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: rovens/circleci-hugo-aws:1.0.0
+      - image: rovens/circleci-hugo-aws:1.1.0
     working_directory: ~/project
     steps:
       - checkout
+      - run:
+          name: Get Theme
+          command: git clone https://github.com/MunifTanjim/minimo.git site/themes/minimo
       - run:
           name: Generate site
           command: hugo -s site
