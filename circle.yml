@@ -2,16 +2,19 @@ version: 2
 jobs:
   build:
     docker:
-      - image: felicianotech/docker-hugo:0.22.1
+      - image: rovens/circleci-hugo-aws
     working_directory: ~/project
     steps:
       - checkout
       - run:
-          name: "Run Hugo"
-          command: HUGO_ENV=production hugo -v -s site/
-      - run:
-          name: "Recipes"
-          command: htmlproofer site/public --allow-hash-href --check-html --empty-alt-ignore --disable-external
+          name: Generate site
+          command: hugo -s site
+      #- run:
+      #    name: "Run Hugo"
+      #    command: HUGO_ENV=production hugo -v -s site/
+      #- run:
+      #    name: "Recipes"
+      #    command: htmlproofer site/public --allow-hash-href --check-html --empty-alt-ignore --disable-external
       - deploy:
           name: Deploy to S3 
           command: |
