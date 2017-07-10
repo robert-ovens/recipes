@@ -1,0 +1,7 @@
+{{ .Content }}
+{{ .Title  }}
+<ul>
+{{ range .Params.Ingredients }}
+    <li>{{ . }}</li>
+{{ end }}
+</ul>
