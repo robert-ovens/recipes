@@ -1,7 +1,38 @@
-{{ .Content }}
-{{ .Title  }}
-<ul>
-{{ range .Params.Ingredients }}
-    <li>{{ . }}</li>
-{{ end }}
-</ul>
+{{ partial "header" . }}
+
+<main class='main'>
+  <article lang='{{ .Params.Lang | default .Lang }}' class='entry'>
+    {{ partial "entry/header" . }}
+    {{ partial "entry/content" . }}
+    <div class='entry-content'>
+
+    <p> {{ .Params.Notes }}</p>
+    <h3>Ingredients</h3>
+    <ul>
+    {{ range .Params.Ingredients }}
+        <li>{{ . }}</li>
+    {{ end }}
+    </ul>
+   
+
+    <h3>Method</h3>
+    <ol>
+    {{ range .Params.Method }}
+        <li>{{ . }}</li>
+    {{ end }}
+    </ol>
+    </div>
+    {{ partial "entry/footer" . }}
+     </div>
+  </article>
+
+  {{ if not .Site.Params.HideEntryNavigation }}
+    {{ partial "nav/entry_nav" . }}
+  {{ end }}
+
+  {{ if not ( eq .Params.comments false ) }}
+    {{ partial "disqus" . }}
+  {{ end }}
+</main>
+
+{{ partial "footer" . }}
