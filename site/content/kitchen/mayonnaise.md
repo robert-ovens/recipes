@@ -5,6 +5,7 @@ draft: false
 serves: 4
 preparation-time:
 cooking-time: 5 minutes
+notes: For Kie :-)
 ingredients:
   - 1 egg yolk
   - 1/2 cup of good quality vegetable oil. Not extra virgin though, it's too fruity and will overpower the mayonnaise. Use extra light olive oil, or macadamia, peanut or a similar lightly flavoured oil. 
