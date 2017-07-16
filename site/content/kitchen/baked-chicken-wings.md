@@ -16,6 +16,8 @@ method:
   - Coat wings, and bake on a mesh so the heat gets both sides of the wings.
   - Turn every 15-20 minutes, until they are browned and crispy. Total cooking time will be about 1 hour.
   - Toss in a glaze of your choice.
-notes: Serve with a salad. And some damp towels for your fingers. These puppies are messy.
+notes: 
 tags:
 ---
+
+Serve with a salad. And some damp towels for your fingers. These puppies are messy. Goes with [Ginger Eschallot Honey Glaze]({{< relref "kitchen/ginger-eschallot-honey-glaze.md" >}}).
