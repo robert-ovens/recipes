@@ -3,8 +3,8 @@ title: "Ginger Eschallot Honey Glaze"
 date: 2017-07-16T18:24:27+10:00
 draft: false
 serves: 
-preparation-time: 5
-cooking-time: -
+preparation-time: 5 m
+cooking-time: 0
 ingredients:
   - 1/2 cup honey
   - 1 tbsp sirracha (or more to taste)
